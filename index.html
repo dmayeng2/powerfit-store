@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PowerFit Store - Suplementos y Proteínas</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>PowerFit Store</h1>
+      <p class="tagline">Tu tienda de confianza para suplementos deportivos</p>
+      <div class="nav-buttons" id="navButtons">
+        <button class="btn btn-primary" onclick="showSection('home')">Inicio</button>
+        <button class="btn btn-secondary" onclick="showSection('login')">Iniciar Sesión</button>
+        <button class="btn btn-secondary" id="cartBtn" style="display:none;" onclick="showSection('cart')">
+          Carrito (<span id="cartCount">0</span>)
+        </button>
+      </div>
+    </header>
+
+    <!-- Sección Inicio -->
+    <section id="home" class="section active">
+      <div class="form-container">
+        <h2 style="color: #ff0000; margin-bottom: 20px;">Bienvenido a PowerFit Store</h2>
+        <p style="line-height: 1.6; margin-bottom: 15px;">
+          Somos la tienda líder en suplementos deportivos de Guatemala. Ofrecemos productos de la más alta calidad para ayudarte a alcanzar tus metas fitness.
+        </p>
+        <div class="info-box">
+          <strong>Nuestra Misión:</strong> Proporcionar suplementos de calidad premium a precios accesibles.
+        </div>
+      </div>
+
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/lfQvLULT01E" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+      <h2 style="color: white; text-align: center; margin: 30px 0;">Nuestros Productos</h2>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- Sección Login -->
+    <section id="login" class="section">
+      <div class="form-container">
+        <h2 style="color: #ff0000; margin-bottom: 20px;">Iniciar Sesión</h2>
+        <div class="info-box">
+          <strong>Usuario:</strong> alumno<br />
+          <strong>Contraseña:</strong> 2025
+        </div>
+        <form id="loginForm">
+          <div class="form-group">
+            <label>Usuario:</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label>Contraseña:</label>
+            <input type="password" id="password" required />
+          </div>
+          <div class="error" id="loginError"></div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Ingresar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Sección Carrito -->
+    <section id="cart" class="section">
+      <div class="form-container" style="max-width: 800px;">
+        <h2 style="color: #ff0000; margin-bottom: 20px;">Tu Carrito de Compras</h2>
+        <div id="cartItems"></div>
+        <div class="cart-total">
+          Total: Q<span id="cartTotal">0.00</span>
+        </div>
+        <div class="form-group" style="margin-top: 20px;">
+          <label>Método de Pago:</label>
+          <select id="paymentMethod" required>
+            <option value="">Seleccione un método</option>
+            <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+            <option value="transferencia">Transferencia Bancaria</option>
+            <option value="efectivo">Efectivo contra entrega</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Método de Envío:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="shipping" value="express" required /> Express (Q50)</label>
+            <label><input type="radio" name="shipping" value="normal" /> Normal (Q25)</label>
+            <label><input type="radio" name="shipping" value="recoger" /> Recoger en tienda (Gratis)</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Comentarios adicionales:</label>
+          <textarea id="comments" rows="3" placeholder="Instrucciones especiales de entrega..."></textarea>
+        </div>
+        <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" onclick="finalizarCompra()">Finalizar Compra</button>
+      </div>
+    </section>
+
+    <!-- Sección Confirmación -->
+    <section id="confirmation" class="section">
+      <div class="form-container">
+        <div class="success-message">
+          <h2 style="color: #155724; margin-bottom: 15px;">Compra Exitosa</h2>
+          <p style="line-height: 1.6;">
+            Gracias por tu compra en PowerFit Store. Hemos recibido tu pedido y lo estamos procesando.
+          </p>
+        </div>
+        <div id="orderSummary"></div>
+        <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="location.reload()">Realizar Nueva Compra</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
