@@ -6,42 +6,42 @@ const productos = [
     nombre: "Whey Protein Premium",
     precio: 450.0,
     descripcion: "Proteína de suero de leche de absorción rápida. 25g de proteína por porción.",
-    imagen: "https://placehold.co/800x600?text=Whey+Protein"
+    imagen: "https://gnc.com.gt/cdn/shop/products/GNC800X800-2022-08-09T103221.683_ba932ebf-442b-422d-8966-4a5180aa5efb_700x.png?v=1681233399"
   },
   {
     id: 2,
     nombre: "Creatina Monohidratada",
     precio: 280.0,
     descripcion: "Creatina pura 100%. Aumenta fuerza y masa muscular.",
-    imagen: "https://placehold.co/800x600?text=Creatina+Monohidratada"
+    imagen: "https://fitness.com.gt/wp-content/uploads/2025/02/Creatina-Monohidratada-Blast-sin-Sabor-de-290-g-1.jpg"
   },
   {
     id: 3,
     nombre: "Pre-Entreno Explosivo",
     precio: 350.0,
     descripcion: "Energía y concentración máxima para tus entrenamientos.",
-    imagen: "https://placehold.co/800x600?text=Pre-Entreno"
+    imagen: "https://gnc.com.gt/cdn/shop/products/GNC800X800_7_800x.png?v=1659554206"
   },
   {
     id: 4,
     nombre: "BCAA 2:1:1",
     precio: 320.0,
     descripcion: "Aminoácidos ramificados para recuperación muscular.",
-    imagen: "https://placehold.co/800x600?text=BCAA+2:1:1"
+    imagen: "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/bup/bup03715/y/8.jpg"
   },
   {
     id: 5,
     nombre: "Multivitamínico Completo",
     precio: 180.0,
     descripcion: "Complejo vitamínico para deportistas. 30 cápsulas.",
-    imagen: "https://placehold.co/800x600?text=Multivitaminico"
+    imagen: "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/fcd/fcd02953/y/8.jpg"
   },
   {
     id: 6,
     nombre: "Glutamina Pura",
     precio: 250.0,
     descripcion: "Recuperación muscular y fortalecimiento del sistema inmune.",
-    imagen: "https://placehold.co/800x600?text=Glutamina"
+    imagen: "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nrx/nrx00097/y/42.jpg"
   }
 ];
 
